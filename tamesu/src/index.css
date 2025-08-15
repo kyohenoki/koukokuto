@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../../koukokuto/src/**.{ts,tsx}";
 
 :root {
 	font-family: "Safari", "SF Pro", "Hiragino Sans", system-ui, sans-serif;
