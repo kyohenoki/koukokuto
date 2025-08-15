@@ -1,0 +1,3 @@
+name = "uragawa"
+compatibility_date = "2025-08-15"
+main = "src/main.ts"

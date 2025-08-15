@@ -1,0 +1,17 @@
+{
+	"name": "uragawa",
+	"version": "0.0.1",
+	"type": "module",
+	"private": true,
+	"scripts": {
+		"dev": "wrangler dev",
+		"test": "vitest",
+		"okuru": "pnpx ts-node src/okuru.ts"
+	},
+	"devDependencies": {
+		"wrangler": "^4.30.0"
+	},
+	"dependencies": {
+		"@hono/zod-validator": "^0.7.2"
+	}
+}
