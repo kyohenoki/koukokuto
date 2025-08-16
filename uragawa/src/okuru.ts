@@ -17,8 +17,10 @@ export async function tsuku() {
 			return {
 				success: true,
 				log: {
+					request: result.request,
 					id: result.id,
-					request: result.request
+					timestamp: result.timestamp,
+					event: result.event
 				}
 			}
 		} else {

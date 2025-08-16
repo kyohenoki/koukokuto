@@ -7,6 +7,13 @@ const log = z.object({
 	id: z.string()
 })
 
+type kotae = {
+	request: string
+	id: string
+	timestamp: number
+	event: 'load' | 'mita' | 'click' | 'mada'
+}
+
 const app = new Hono()
 	.use('*', requestId())
 	.get('/', (c) => {
@@ -14,9 +21,11 @@ const app = new Hono()
 	})
 	.post('/log', zValidator('json', log), (c) => {
 		const logg = c.req.valid('json')
-		return c.json({
+		return c.json<kotae>({
 			request: c.get('requestId'),
-			id: logg.id
+			id: logg.id,
+			timestamp: Date.now(),
+			event: 'load'
 		})
 	})
 
