@@ -3,6 +3,8 @@ import { hc } from 'hono/client'
 
 const client = hc<Logt>('http://localhost:8787')
 
+export type tsukukomoku = Awaited<ReturnType<typeof tsuku>>
+
 export async function tsuku() {
 	try {
 		const res = await client.log.$post({
