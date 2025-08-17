@@ -1,7 +1,7 @@
-import type { App } from '@uragawa/main'
+import type { Logt } from '@uragawa/main'
 import { hc } from 'hono/client'
 
-const client = hc<App>('http://localhost:8787')
+const client = hc<Logt>('http://localhost:8787')
 
 export async function tsuku() {
 	try {

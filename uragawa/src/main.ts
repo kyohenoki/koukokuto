@@ -8,7 +8,7 @@ const log = z.object({
 	id: z.string()
 })
 
-type kotae = {
+export type kotae = {
 	request: string
 	id: string
 	timestamp: number
@@ -16,19 +16,22 @@ type kotae = {
 }
 
 const app = new Hono()
-	.use('*', requestId(), cors())
-	.get('/', (c) => {
-		return c.text(c.get('requestId'))
-	})
-	.post('/log', zValidator('json', log), (c) => {
-		const logg = c.req.valid('json')
-		return c.json<kotae>({
-			request: c.get('requestId'),
-			id: logg.id,
-			timestamp: Date.now(),
-			event: 'load'
-		})
-	})
 
-export type App = typeof app
+app.use('*', requestId(), cors())
+
+app.get('/', (c) => {
+	return c.text(c.get('requestId'))
+})
+
+const logt = app.post('/log', zValidator('json', log), (c) => {
+	const logg = c.req.valid('json')
+	return c.json<kotae>({
+		request: c.get('requestId'),
+		id: logg.id,
+		timestamp: Date.now(),
+		event: 'load'
+	})
+})
+
+export type Logt = typeof logt
 export default app
