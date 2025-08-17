@@ -8,7 +8,7 @@ export default defineConfig({
 	resolve: {
 		alias: {
 			'@': resolve(__dirname, './src'),
-			'@koukokuto': resolve(__dirname, '../koukokuto/src')
+			'@koukoku': resolve(__dirname, '../koukoku/src')
 		}
 	}
 })

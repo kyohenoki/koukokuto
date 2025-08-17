@@ -1,5 +1,5 @@
-// import { Koukoku } from "koukokuto"
-import { Koukoku } from '@koukokuto/index'
+// import { Koukoku } from "koukoku"
+import { Koukoku } from '@koukoku/index'
 
 export default function App() {
 	return (

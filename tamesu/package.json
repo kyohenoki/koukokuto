@@ -7,8 +7,5 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"start": "pnpm run build && pnpm run preview"
-	},
-	"dependencies": {
-		"koukokuto": "workspace:*"
 	}
 }

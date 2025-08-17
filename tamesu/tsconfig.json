@@ -15,7 +15,7 @@
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["src/*"],
-			"@koukokuto/*": ["../koukokuto/src/*"]
+			"@koukoku/*": ["../koukoku/src/*"]
 		}
 	}
 }
