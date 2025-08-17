@@ -7,21 +7,18 @@ export type tsukukomoku = Awaited<ReturnType<typeof tsuku>>
 
 export async function tsuku() {
 	try {
+		const uuid = crypto.randomUUID()
 		const res = await client.log.$post({
 			json: {
-				id: 'ichiban'
+				id: 'ichiban',
+				session: uuid
 			}
 		})
 		if (res.ok) {
 			const result = await res.json()
 			return {
 				success: true,
-				log: {
-					request: result.request,
-					id: result.id,
-					timestamp: result.timestamp,
-					event: result.event
-				}
+				log: result
 			}
 		} else {
 			return {

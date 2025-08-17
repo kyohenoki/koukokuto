@@ -6,10 +6,10 @@
 	"scripts": {
 		"dev": "wrangler dev"
 	},
-	"devDependencies": {
-		"wrangler": "^4.30.0"
-	},
 	"dependencies": {
 		"@hono/zod-validator": "^0.7.2"
+	},
+	"devDependencies": {
+		"wrangler": "^4.30.0"
 	}
 }
