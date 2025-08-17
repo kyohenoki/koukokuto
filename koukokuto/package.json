@@ -3,7 +3,12 @@
 	"version": "0.0.1",
 	"type": "module",
 	"private": true,
+	"main": "dist/koukoku.js",
+	"types": "dist/index.d.ts",
 	"scripts": {
 		"build": "vite build"
+	},
+	"devDependencies": {
+		"vite-plugin-dts": "^4.5.4"
 	}
 }

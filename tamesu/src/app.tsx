@@ -1,3 +1,4 @@
+// import { Koukoku } from "koukokuto"
 import { Koukoku } from '@koukokuto/index'
 
 export default function App() {

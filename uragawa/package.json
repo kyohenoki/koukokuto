@@ -4,9 +4,7 @@
 	"type": "module",
 	"private": true,
 	"scripts": {
-		"dev": "wrangler dev",
-		"test": "vitest",
-		"okuru": "pnpx ts-node src/okuru.ts"
+		"dev": "wrangler dev"
 	},
 	"devDependencies": {
 		"wrangler": "^4.30.0"

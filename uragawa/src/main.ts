@@ -1,5 +1,6 @@
 import { zValidator } from '@hono/zod-validator'
 import { Hono } from 'hono'
+import { cors } from 'hono/cors'
 import { requestId } from 'hono/request-id'
 import { z } from 'zod'
 
@@ -15,7 +16,7 @@ type kotae = {
 }
 
 const app = new Hono()
-	.use('*', requestId())
+	.use('*', requestId(), cors())
 	.get('/', (c) => {
 		return c.text(c.get('requestId'))
 	})

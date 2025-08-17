@@ -3,7 +3,9 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"check": "biome check --write"
+		"check": "biome check --write",
+		"tamesu": "cd tamesu && pnpm run dev",
+		"uragawa": "cd uragawa && pnpm run dev"
 	},
 	"dependencies": {
 		"hono": "^4.9.2",

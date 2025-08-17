@@ -9,9 +9,14 @@
 		"esModuleInterop": true,
 		"isolatedModules": true,
 		"skipLibCheck": true,
-		"noEmit": true,
 		"resolveJsonModule": true,
 		"jsx": "react-jsx",
-		"baseUrl": "."
+		"baseUrl": ".",
+		"paths": {
+			"@/*": ["src/*"],
+			"@uragawa/*": ["../uragawa/src/*"]
+		},
+		"declaration": true,
+		"emitDeclarationOnly": true
 	}
 }

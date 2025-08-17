@@ -1,9 +1,7 @@
+import type { App } from '@uragawa/main'
 import { hc } from 'hono/client'
-import type { App } from './main'
 
 const client = hc<App>('http://localhost:8787')
-
-console.log(await tsuku())
 
 export async function tsuku() {
 	try {
