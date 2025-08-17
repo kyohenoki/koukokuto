@@ -2,11 +2,11 @@
 @source "../../koukoku/src/**.{ts,tsx}";
 
 :root {
-	font-family: "Safari", "SF Pro", "Hiragino Sans", system-ui, sans-serif;
+	font-family: "Safari", "SF Pro", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
 }
 
 @font-face {
 	font-family: "Safari";
-	src: local(-apple-system);
+	src: local(-apple-system), local("Inter Variable");
 	unicode-range: U+00-52F, U+1E00-1FFF, U+2200-22FF;
 }
